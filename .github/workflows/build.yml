@@ -18,13 +18,13 @@ jobs:
         run: msbuild /p:Configuration=Release /t:build twinTurboRumbler.sln
 
       - name: Upload Test tool
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: CommandlineTestTool
           path: x64/Release/ttr.exe
 
       - name: Upload the SCS Plugin
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: ForceRumbleBack_SCS_Plugin
           path: x64/Release/ForceRumbleBack.dll
